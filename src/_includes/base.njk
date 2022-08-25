@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/style.css"  type="text/css" />
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <script src="/index.js" type="text/javascript" charset="utf-8" defer></script>
+  </head>
+  <body>
+    {% include 'header.njk' %}
+    {{ content | safe }}
+    {% include 'footer.njk' %}
+  </body>
+</html>
