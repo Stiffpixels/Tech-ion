@@ -6,35 +6,19 @@ currPage: curr-page-h
     <main>
     <article class="article-feat container">
       <p class="sac">this shouldnt be displayed</p>
-        <h2 class="article-feat-body">Termux a must have on your phone.</h2>
+        <h2 class="article-feat-title">Termux a must have on your phone.</h2>
       <p class="feat-full-post full-post"><a href="#" >continue reading</a></p>
     </article>
     <div class="article-bottom container">
     <div class="article-recent-cont">
-      {% for post in collections.post | reverse %}
-      <article class="article-recent">
-      <section class="article-recent-main">
-      <h2 class="article-recent-title">{{post.data.title}}</h2>
-      <p class="article-body">{{post.data.description}}</p>
-      <p class="full-post"><a href="{{ post.url}}" >continue reading</a></p>
-      </section>
-      <section class="article-recent-secondary">
-        <img class="article-recent-img" src="{{post.data.image}}" alt="{{post.data.imageAlt}}" />
-      </section>
-      </article>
+      {% for post in collections.featured | reverse %}
+      {% include 'articleSnip.njk' %}
       {% endfor %}
       </div>
       <div class="sidebar-cont">
       <aside class="sidebar">
         <h3>Recent posts</h3>
-        <section class="sidebar-recent-post">
-          <img src="assets/image/mobo.jpg" alt="CPU on motherboard socket" loading="lazy" />
-          <p class="sidebar-body">A very minimalistic budget friendly pc.</p>
-        </section>
-        <section class="sidebar-recent-post">
-          <img src="assets/image/android.jpg" alt="Android phone with android logo" loading="lazy"/>
-          <p class="sidebar-body">How to switch to android? a beginners guide to android.</p>
-        </section>
+        {% include 'sideSnip.njk' %}
       </aside>
       </div>
       </div>
