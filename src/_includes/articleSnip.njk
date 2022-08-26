@@ -1,10 +1,11 @@
 <article class="article-recent">
       <section class="article-recent-main">
-      <a class="title-link" href="{{ post.url }}"><h2 class="article-recent-title">{{post.data.title}}</h2></a>
-      <p class="article-body">{{post.data.description}}</p>
+      <a class="title-link" href="{{ post.url }}"><h2 class="article-recent-title">{{ post.data.title }}</h2></a>
+      <p class="article-body">{{ post.data.description }}</p>
       <p class="full-post"><a href="{{ post.url}}" >continue reading</a></p>
       </section>
       <section class="article-recent-secondary">
         <img class="article-recent-img" src="{{post.data.image}}" alt="{{post.data.imageAlt}}" />
+        <p class="date-txt">{{ post.date | postDate }}</p>
       </section>
 </article>

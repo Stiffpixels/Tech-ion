@@ -1,6 +1,6 @@
 {% for post in collections.recent %}
 <section class="sidebar-recent-post">
-  <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" loading="lazy" />
+  <a href="{{ post.url }}"><img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" loading="lazy" /></a>
 <p class="sidebar-body">
   {{post.data.title}}
 </p>
