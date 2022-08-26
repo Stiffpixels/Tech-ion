@@ -14,5 +14,5 @@ backend:
         - {label: "Featured image", name: "image", widget: "image"}
         - {label: "Image caption", name: "imageAlt", widget: "string"}
         - {label: "Summary", name: "description", widget: "string"}
-        - {label: "Tags", name: "tags" widget: "list", default: ["post"]}
+        - {label: "Tags", name: "tags", widget: "list", default: ["post"]}
         - {label: "Body", name: "body", widget: "markdown"}
