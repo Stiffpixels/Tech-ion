@@ -1,0 +1,10 @@
+---
+# ./src/heroStyleCss.njk
+permalink: herostyle.css
+---
+
+{%- set latestPost = collections.main | last -%}
+
+.article-feat:before{
+  background-image: url({{ latestPost.data.image }});
+}

@@ -4,8 +4,10 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Guides to help you</title>
     <link rel="stylesheet" href="/style.css"  type="text/css" />
+    <link rel="stylesheet" href="/herostyle.css" type="text/css" media="all" />
     <meta name="viewport" content="width=device-width initial-scale=1">
     <script src="/index.js" type="text/javascript" charset="utf-8" defer></script>
+    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
     <header>
@@ -23,6 +25,30 @@
         <main>
     <div class="article-bottom container">
     <div class="article-recent-cont cont-wo-feat">
+      
+      <article class="article-recent">
+      <section class="article-recent-main">
+      <a class="title-link" href="/blog/MainFeatured-article/"><h2 class="article-recent-title">Termux a must have on your android phone</h2></a>
+      <p class="article-body"></p>
+      <p class="full-post"><a href="/blog/MainFeatured-article/" >continue reading</a></p>
+      </section>
+      <section class="article-recent-secondary">
+        <img class="article-recent-img" src="/assets/image/termux.jpg" alt="" />
+        <p class="date-txt">12/3/2022</p>
+      </section>
+</article>
+      
+      <article class="article-recent">
+      <section class="article-recent-main">
+      <a class="title-link" href="/blog/{{year}-{month}-{day}-{slug}}/"><h2 class="article-recent-title">Most useful resources to a programmer</h2></a>
+      <p class="article-body">A good programmer always has a few must have resources under their belt. Finding resources and learning from them seems a bit of a challenge, so here we are to simplify it for you.</p>
+      <p class="full-post"><a href="/blog/{{year}-{month}-{day}-{slug}}/" >continue reading</a></p>
+      </section>
+      <section class="article-recent-secondary">
+        <img class="article-recent-img" src="/assets/image/resourcesprogramming.jpg" alt="Neon lit programming setup" />
+        <p class="date-txt">12/3/2022</p>
+      </section>
+</article>
       
       <article class="article-recent">
       <section class="article-recent-main">
@@ -108,5 +134,16 @@
       </div>
     </footer>
   
+  <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
   </body>
 </html>

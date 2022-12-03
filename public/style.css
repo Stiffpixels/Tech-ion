@@ -93,7 +93,11 @@ nav a:focus{
   margin: 0;
   font-weight: 300;
   margin-top: 40%;
+  margin-left: .65rem;
   position: relative;
+}
+
+.article-feat-link{
   color: rgb(33,225,227);
 }
 
@@ -127,6 +131,7 @@ nav a:focus{
   position: relative;
   color: #ffffff;
   margin-bottom: 2rem;
+  margin-left: .65rem;
 }
 
 .date-txt{
@@ -187,7 +192,7 @@ main{
   bottom: 0;
   left: 0;
   opacity: .7;
-  background: url("assets/image/termux.jpg");
+  
   background-repeat: no-repeat;
   background-size: cover;
 }

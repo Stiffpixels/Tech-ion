@@ -4,11 +4,8 @@ layout: 'base.njk'
 currPage: curr-page-h
 ---
     <main>
-    <article class="article-feat container">
-      <p class="sac">this shouldnt be displayed</p>
-        <h2 class="article-feat-title">Termux a must have on your phone.</h2>
-      <p class="feat-full-post full-post"><a href="#" >continue reading</a></p>
-    </article>
+    {%- set Mainpost = collections.main | last  -%}
+    {% include 'mainPageSnip.njk' %}
     <div class="article-bottom container">
     <div class="article-recent-cont">
       {% for post in collections.featured | reverse %}

@@ -8,6 +8,7 @@ module.exports = function(eleventyConfig){
   eleventyConfig.addPassthroughCopy('./src/style.css');
   eleventyConfig.addPassthroughCopy('./src/assets');
   eleventyConfig.addPassthroughCopy('./src/index.js');
+  eleventyConfig.addPassthroughCopy('./src/herostyle.css');
   eleventyConfig.addPassthroughCopy('./src/admin');
   return{
     dir:{

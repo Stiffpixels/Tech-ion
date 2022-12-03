@@ -4,8 +4,10 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>A very minimalistic budget friendly pc.</title>
     <link rel="stylesheet" href="/style.css"  type="text/css" />
+    <link rel="stylesheet" href="/herostyle.css" type="text/css" media="all" />
     <meta name="viewport" content="width=device-width initial-scale=1">
     <script src="/index.js" type="text/javascript" charset="utf-8" defer></script>
+    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
     <header>
@@ -66,5 +68,16 @@ Building a pc does not have to be expensive, and they have been used since long 
       </div>
     </footer>
   
+  <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
   </body>
 </html>
