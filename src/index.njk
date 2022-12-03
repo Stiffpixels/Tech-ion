@@ -4,7 +4,7 @@ layout: 'base.njk'
 currPage: curr-page-h
 ---
     <main>
-    {%- set Mainpost = collections.main | last  -%}
+    {%- set Mainpost = collections.main | first  -%}
     {% include 'mainPageSnip.njk' %}
     <div class="article-bottom container">
     <div class="article-recent-cont">
