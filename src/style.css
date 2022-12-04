@@ -25,9 +25,14 @@
 body{
   margin: 0;
   font-size: 1.25rem;
-  color: #707070;
+  color: #a8a8a8;
   font-family: 'Quicksand', serif;
-  background: #2d2d2d;
+  /*background: #2d2d2d;*/
+  background: rgb(13,13,15);
+  min-height: 1vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 img{
@@ -48,7 +53,7 @@ a{
   font-weight: bolder;
   margin: 0;
   margin-top: .35em;
-  color: #dfdfdf;
+  color: #ffffff;
 }
 
 h2, h3{
@@ -61,7 +66,7 @@ h2, h3{
 h3{
   margin-top: 0;
   font-size: 1.5rem;
-  color: rgb(31,92,60);
+  color: rgb(41,148,73);
 }
 header{
   box-sizing:border-box;
@@ -69,15 +74,16 @@ header{
   z-index: 2;
   top: 0;
   width:100%;
-  background: rgb(0,0,0);
+  background: rgb(33,38,41);
   animation-duration: .7s;
   animation-name: pull-down;
   transition: top .3s linear;
+  box-shadow: 0 0 .5em black;
 }
 
 nav a{
   text-decoration: none;
-  color: rgb(90,90,90);
+  color: rgb(181,181,181);
   font-weight: bolder;
 }
 
@@ -91,19 +97,21 @@ nav a:focus{
 
 .article-feat-title{
   margin: 0;
-  font-weight: 300;
+  font-weight: 900;
+  text-shadow: .075em .075em .2em black;
   margin-top: 40%;
   margin-left: .65rem;
   position: relative;
 }
 
 .article-feat-link{
-  color: rgb(33,225,227);
+  color: rgb(92,182,216);
+  /*color: #dfdfdf;*/
 }
 
 .article-recent-title{
   margin: 0.5em 0;
-  color: rgb(39,133,67);
+  color: rgb(40,166,78);
   
 }
 
@@ -130,7 +138,7 @@ nav a:focus{
 .feat-full-post{
   position: relative;
   color: #ffffff;
-  margin-bottom: 2rem;
+  margin-top: .75em;
   margin-left: .65rem;
 }
 
@@ -151,7 +159,7 @@ nav a:focus{
 
 footer{
   text-align: center;
-  background: rgb(31,31,31);
+  background: rgb(33,38,41);
 }
 
 .footer-body{
@@ -165,7 +173,7 @@ footer{
 
 main{
   box-sizing:border-box;
-  margin: 3.475em auto 0 auto;
+  margin: 3.4em auto 0 auto;
 }
 
 .container{
@@ -192,7 +200,7 @@ main{
   bottom: 0;
   left: 0;
   opacity: .7;
-  
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -231,12 +239,13 @@ main{
 .sidebar-recent-post{
   margin-bottom: 1em;
   padding: .8em;
+  border-radius: .5em;
   box-sizing: border-box;
-  background: rgb(23,23,23);
+  background: rgb(33,38,41);
 }
 
 .article-recent:last-child{
-  padding-bottom: .5em;
+  margin-bottom: 1em;
 }
 
 .container-nav{
@@ -252,6 +261,10 @@ main{
 @media(min-width:600px){
   .date-txt{
     text-align: right;
+  }
+  
+  .feat-full-post{
+    margin-bottom: 2em;
   }
   
   .article-bottom{
