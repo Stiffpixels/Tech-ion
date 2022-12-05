@@ -28,11 +28,9 @@ body{
   color: #a8a8a8;
   font-family: 'Quicksand', serif;
   /*background: #2d2d2d;*/
-  background: rgb(13,13,15);
+  background: rgb(20,20,23);
   min-height: 1vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
 }
 
 img{
@@ -75,7 +73,8 @@ header{
   top: 0;
   width:100%;
   background: rgb(33,38,41);
-  animation-duration: .7s;
+  animation-duration: .8s;
+  animation-timing-function: linear;
   animation-name: pull-down;
   transition: top .3s linear;
   box-shadow: 0 0 .5em black;
@@ -140,6 +139,7 @@ nav a:focus{
   color: #ffffff;
   margin-top: .75em;
   margin-left: .65rem;
+  margin-bottom: 2em;
 }
 
 .date-txt{
@@ -159,6 +159,7 @@ nav a:focus{
 
 footer{
   text-align: center;
+  grid-column-end: -1;
   background: rgb(33,38,41);
 }
 
@@ -192,14 +193,20 @@ main{
   z-index: 1;
 }
 
-.article-feat:before{
+.article-feat-bg{
+  width: 100vw;
+  position: relative;
+}
+
+.article-feat-bg:before{
   content:'';
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  opacity: .7;
+  opacity: .5;
+  background-image: url("/assets/image/termux.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -216,7 +223,7 @@ main{
 
 .article-recent{
   display: flex;
-  margin-top: 2em;
+  margin-top: 1.5em;
   flex-direction: column;
 }
 
@@ -225,15 +232,15 @@ main{
 }
 
 .article-recent-cont{
-  border-top: 1px solid #707070;
-  margin-top: 2em;
+  border-top: 1px solid #a8a8a8;
+  margin-top: 1.5em;
 }
 .sidebar{
-  margin-top: 2em;
+  margin-top: 1.5em;
 }
 .sidebar-cont{
-  border-top: 1px solid #707070;
-  margin-top: 2em;
+  border-top: 1px solid #a8a8a8;
+  margin-top: 1.5em;
 }
 
 .sidebar-recent-post{
@@ -258,13 +265,13 @@ main{
 }
 
 
+
+
 @media(min-width:600px){
   .date-txt{
     text-align: right;
-  }
-  
-  .feat-full-post{
-    margin-bottom: 2em;
+    font-size: .7rem;
+    float: right;
   }
   
   .article-bottom{
@@ -296,11 +303,11 @@ main{
   
   .sidebar-cont{
     width: 26%;
-    margin-top: 2em;
   }
   .article-recent-img{
-  height: 165px;
+  height: 145px;
   width: 100%;
+  object-position: center;
   object-fit: cover;
   }
   
