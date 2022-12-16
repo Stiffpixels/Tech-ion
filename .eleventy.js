@@ -5,6 +5,12 @@ module.exports = function(eleventyConfig){
     return DateTime.fromJSDate(dateobj).toLocaleString(DateTime.Date_Med);
   });
   
+  eleventyConfig.addCollection("descendingSort", (collectionApi)=>{
+    return collectionApi.getFilteredByTag("main").sort((a,b)=>{
+      return b.date - a.date;
+    });
+  });
+  
   eleventyConfig.addPassthroughCopy('./src/style.css');
   eleventyConfig.addPassthroughCopy('./src/assets');
   eleventyConfig.addPassthroughCopy('./src/index.js');

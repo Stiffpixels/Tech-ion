@@ -3,7 +3,7 @@
 permalink: herostyle.css
 ---
 
-{%- set latestPost = collections.main | first -%}
+{%- set latestPost = collections.descendingSort | first-%}
 
 .article-feat-bg:before{
   background-image: url({{ latestPost.data.image }});
