@@ -84,6 +84,11 @@ nav a{
   text-decoration: none;
   color: rgb(181,181,181);
   font-weight: bolder;
+  font-size: .9rem;
+}
+
+.admin-link{
+  display: none;
 }
 
 nav a:hover{
@@ -273,6 +278,10 @@ footer{
 
 
 @media(min-width:600px){
+  .admin-link{
+  display: inline-block;
+  }
+  
   .date-txt{
     text-align: right;
     font-size: .7rem;

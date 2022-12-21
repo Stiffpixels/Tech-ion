@@ -1,4 +1,4 @@
-{% for post in collections.recent %}
+{% for post in collections.recent | reverse %}
 {% if loop.index<4 %}
 <section class="sidebar-recent-post">
   <a href="{{ post.url }}"><img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" loading="lazy" /></a>
