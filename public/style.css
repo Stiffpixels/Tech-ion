@@ -106,6 +106,7 @@ nav a:focus{
   margin-top: 40%;
   margin-left: .65rem;
   position: relative;
+  margin-bottom: 2em;
 }
 
 .article-feat-link{
@@ -144,7 +145,6 @@ nav a:focus{
   color: #ffffff;
   margin-top: .75em;
   margin-left: .65rem;
-  margin-bottom: 2em;
 }
 
 .date-txt{
@@ -278,6 +278,12 @@ footer{
 
 
 @media(min-width:600px){
+  
+  .article-feat-title{
+    margin-top: 45%;
+    font-size: 2rem;
+  }
+  
   .admin-link{
   display: inline-block;
   }
@@ -347,6 +353,8 @@ footer{
   }
   
 }
+
+
 nav li{
   font-size: 0.875em;
   margin: 0 .2em ;
